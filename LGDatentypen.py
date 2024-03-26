@@ -87,7 +87,20 @@ list_k=list_i+list_j    # Wie List.extend()
 var=set(list_k)         # Konvertierung in Set entfernt Duplikiate, ändert aber die Reihenfolge
 print(all(list_i), any(list_i)) # Builtin Funktionen, die prüfen, ob ein oder alle Elemente der Liste True sind
 
-#
+# String
 
+vorname="Stefan"
+nachname="Koschnik"
+alter=54
 
+dictPerson = {'Vorname': vorname, 'Nachname': nachname, 'Alter': alter}
 
+# 1.Methode
+# satz="Mein Name ist {} {}".format(vorname, nachname)
+# 2. Methode
+# satz=f"Mein Name ist {dictPerson['Vorname']} {dictPerson['Nachname']} und ich bin {dictPerson['Alter']} Jahre alt."
+# 3. Methode
+# satz="Mein Name ist {0} {1} und ich bin {2} Jahre alt.".format(vorname, nachname, alter)
+# 4. Methode
+satz="Mein Name ist {vorname} {nachname} und ich bin {alter} Jahre alt.".format(vorname="Stefan", nachname="Koschnik", alter=54)
+print(satz)
